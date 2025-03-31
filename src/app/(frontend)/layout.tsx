@@ -11,7 +11,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-[#FFFEF9] dark:bg-[#0D1012]">
+      <body className="bg-[#FFFEF9] dark:bg-[#0D1012] w-full h-screen">
         <main>
           <ThemeProvider enableSystem={true} disableTransitionOnChange={true} attribute="class">
             {children}
