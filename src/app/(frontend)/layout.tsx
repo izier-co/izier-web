@@ -3,8 +3,10 @@ import { ThemeProvider } from 'next-themes'
 import { Geist_Mono } from 'next/font/google'
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  title:
+    "Enterprise-Grade IT Software Solutions: Jakarta's Smart IT & Custom Development Experts | Izier",
+  description:
+    'Izier delivers enterprise-grade IT software solutions that empower your business to modernize workflows. As a Jakarta-based software house, we specialize in smart IT solutions and custom software development that are secure, scalable, and sustainable—serving healthcare, education, finance, retail, and more.',
 }
 
 const geistMono = Geist_Mono({
