@@ -18,13 +18,15 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en" suppressHydrationWarning className={geistMono.className}>
-      <body className="bg-[#FFFEF9] dark:bg-[#0D1012] w-full h-screen">
-        <main>
-          <ThemeProvider enableSystem={true} disableTransitionOnChange={true} attribute="class">
-            {children}
-          </ThemeProvider>
-        </main>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistMono.className} bg-brand-white dark:bg-brand-black w-full h-screen px-48`}
+    >
+      <body>
+        <ThemeProvider enableSystem={true} disableTransitionOnChange={true} attribute="class">
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )
