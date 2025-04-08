@@ -2,13 +2,14 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import path from 'path'
+import path from 'node:path'
 import { buildConfig } from 'payload'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { ServiceList } from './collections/ServiceList'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, ServiceList],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
@@ -30,7 +31,7 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
     },
-    idType: 'uuid'
+    idType: 'uuid',
   }),
   sharp,
   plugins: [
