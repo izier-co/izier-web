@@ -1,9 +1,36 @@
+import CustomLink from './customLink'
+
 type ServiceProps = {
   children?: React.ReactNode
+  className?: string
 }
 
-const Service = ({ children }: ServiceProps) => {
-  return <p className="font-light text-light-gray-11 dark:text-dark-gray-11">{children}</p>
+type ServiceListProps = ServiceProps & {
+  href: string
 }
 
-export default Service
+export const Service = ({ children, className }: ServiceProps) => {
+  return <div className={`${className}`}>{children}</div>
+}
+
+export const ServiceText = ({ children }: ServiceProps) => {
+  return (
+    <div className="flex flex-col gap-4">
+      <p className="font-light text-light-gray-11 dark:text-dark-gray-11">{children}</p>
+    </div>
+  )
+}
+
+export const ServiceList = ({ href, children }: ServiceListProps) => {
+  return (
+    <div>
+      <ul className="grid grid-cols-2 grid-rows-3 gap-x-12 gap-y-4 w-fit list-inside list-disc list-image-[url('/lists-icon-light.svg')] dark:list-image-[url('/lists-icon-dark.svg')] align-middle">
+        <li className="w-fit">
+          <CustomLink href={href} target="_self">
+            {children}
+          </CustomLink>
+        </li>
+      </ul>
+    </div>
+  )
+}
