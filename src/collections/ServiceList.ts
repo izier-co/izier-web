@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { slugField } from 'src/fields/slug'
 
 export const ServiceList: CollectionConfig = {
   slug: 'services',
@@ -12,12 +13,7 @@ export const ServiceList: CollectionConfig = {
       label: 'Service Name',
       required: true,
     },
-    {
-      name: 'service-url',
-      type: 'text',
-      label: 'Service URL',
-      required: true,
-    },
+    ...slugField('service-name', {}, 'sidebar'),
     {
       name: 'service-description',
       type: 'textarea',
