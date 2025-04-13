@@ -20,7 +20,7 @@ export default async function HomePage() {
         solutions streamline operations, boost efficiency, and drive innovation, helping businesses
         thrive in dynamic markets and maintain a competitive edge.
       </ValueProposition>
-      <Service>
+      <Service className="flex flex-col gap-6">
         <ServiceText>
           <CustomLink href="#" target="_self">
             Izier&apos;s
@@ -30,11 +30,16 @@ export default async function HomePage() {
           solutions are built to grow with your business, turning technology into a strategic
           advantage.
         </ServiceText>
-        <>
-          {findResult.docs.map((page) => {
-            <ServiceList href={page['service-url']}>{page['service-name']}</ServiceList>
-          })}
-        </>
+        <div className="grid grid-cols-2 grid-rows-3 gap-4">
+          {findResult.docs
+            .slice()
+            .reverse()
+            .map((page) => (
+              <ServiceList key={page.createdAt} href={page.slug || '#'}>
+                {page['service-name']}
+              </ServiceList>
+            ))}
+        </div>
       </Service>
     </div>
   )
