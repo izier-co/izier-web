@@ -23,7 +23,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistMono.className} bg-brand-white dark:bg-brand-black w-full h-screen px-48`}
+      className={`${geistMono.className} bg-brand-white dark:bg-brand-black w-full h-screen px-128`}
     >
       <body>
         <ThemeProvider enableSystem={true} disableTransitionOnChange={true} attribute="class">
