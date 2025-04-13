@@ -159,7 +159,8 @@ export interface Media {
 export interface Service {
   id: string;
   'service-name': string;
-  'service-url': string;
+  slug?: string | null;
+  slugLock?: boolean | null;
   'service-description'?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -265,7 +266,8 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface ServicesSelect<T extends boolean = true> {
   'service-name'?: T;
-  'service-url'?: T;
+  slug?: T;
+  slugLock?: T;
   'service-description'?: T;
   updatedAt?: T;
   createdAt?: T;
