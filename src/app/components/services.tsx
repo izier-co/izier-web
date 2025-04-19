@@ -26,7 +26,7 @@ export const ServiceList = ({ href, children }: ServiceListProps) => {
     <div>
       <ul className="h-fit w-fit list-inside list-disc list-image-[url('/lists-icon-light.svg')] dark:list-image-[url('/lists-icon-dark.svg')] align-middle">
         <li className="w-fit h-fit">
-          <CustomLink href={href} target="_self">
+          <CustomLink href={`services/${href}`} target="_self">
             {children}
           </CustomLink>
         </li>
