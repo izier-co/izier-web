@@ -30,7 +30,7 @@ export default async function HomePage() {
           solutions are built to grow with your business, turning technology into a strategic
           advantage.
         </ServiceText>
-        <div className="grid grid-cols-2 grid-rows-3 gap-x-24 gap-y-4 w-fit">
+        <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-x-24 gap-y-4 w-fit">
           {findResult.docs
             .slice()
             .reverse()
