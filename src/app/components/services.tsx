@@ -10,15 +10,7 @@ type ServiceListProps = ServiceProps & {
 }
 
 export const Service = ({ children, className }: ServiceProps) => {
-  return <div className={`${className}`}>{children}</div>
-}
-
-export const ServiceText = ({ children }: ServiceProps) => {
-  return (
-    <div className="flex flex-col gap-4">
-      <p className="font-light text-light-gray-11 dark:text-dark-gray-11">{children}</p>
-    </div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 export const ServiceList = ({ href, children }: ServiceListProps) => {
