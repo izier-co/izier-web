@@ -1,10 +1,11 @@
 import './globals.css'
 import Title from '@/components/heroTitle'
 import ValueProposition from '@/components/valueProp'
-import { Service, ServiceList, ServiceText } from '@/components/services'
+import { Service, ServiceList } from '@/components/services'
 import CustomLink from '@/components/customLink'
 import { getPayload } from 'payload'
 import config from '@payload-config'
+import { Text } from '@/components/text'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -21,7 +22,7 @@ export default async function HomePage() {
         thrive in dynamic markets and maintain a competitive edge.
       </ValueProposition>
       <Service className="flex flex-col gap-6">
-        <ServiceText>
+        <Text>
           <CustomLink href="#" target="_self">
             Izier&apos;s
           </CustomLink>
@@ -29,7 +30,7 @@ export default async function HomePage() {
           that solves real business problems. Whether you&apos;re scaling up or optimizing, our
           solutions are built to grow with your business, turning technology into a strategic
           advantage.
-        </ServiceText>
+        </Text>
         <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-x-24 gap-y-4 w-fit">
           {findResult.docs
             .slice()
