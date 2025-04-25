@@ -6,6 +6,7 @@ import CustomLink from '@/components/customLink'
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { Text } from '@/components/text'
+import { TechStack, TechStackImage, TechStackImageGrid } from '@/components/techStack'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -42,6 +43,14 @@ export default async function HomePage() {
             ))}
         </div>
       </Service>
+      <TechStack className="flex flex-col gap-6">
+        <Text>Lorem ipsum dolor sit amet</Text>
+        <TechStackImageGrid>
+          {Array.from({ length: 10 }).map((_, index) => (
+            <TechStackImage key={index} src="/react.png" alt="react logo" width={64} height={64} />
+          ))}
+        </TechStackImageGrid>
+      </TechStack>
     </div>
   )
 }
