@@ -11,6 +11,7 @@ import { TechStack, TechStackImage, TechStackImageGrid } from '@/components/tech
 export default async function HomePage() {
   const payload = await getPayload({ config })
   const findResult = await payload.find({ collection: 'services' })
+  const mediaResult = await payload.find({ collection: 'media' })
 
   return (
     <div className="flex flex-col gap-6">
@@ -46,8 +47,14 @@ export default async function HomePage() {
       <TechStack className="flex flex-col gap-6">
         <Text>Lorem ipsum dolor sit amet</Text>
         <TechStackImageGrid>
-          {Array.from({ length: 10 }).map((_, index) => (
-            <TechStackImage key={index} src="/react.png" alt="react logo" width={64} height={64} />
+          {mediaResult.docs.map((media) => (
+            <TechStackImage
+              key={media.id}
+              src={media.url || ''}
+              alt={media.alt}
+              width={64}
+              height={64}
+            />
           ))}
         </TechStackImageGrid>
       </TechStack>
