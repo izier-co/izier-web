@@ -1,9 +1,10 @@
+import { sign } from 'crypto'
 import type { CollectionConfig } from 'payload'
 
 export const Media: CollectionConfig = {
   slug: 'media',
-  access: {
-    read: () => true,
+  admin: {
+    useAsTitle: 'alt',
   },
   fields: [
     {
@@ -11,6 +12,40 @@ export const Media: CollectionConfig = {
       type: 'text',
       required: true,
     },
+    {
+      name: 'caption',
+      type: 'text',
+      required: false,
+    },
+    {
+      name: 'useAs',
+      type: 'select',
+      required: false,
+      options: [
+        { label: 'Global Image', value: 'global-image' },
+        { label: 'Tech Stack Image', value: 'tech-stack-image' },
+        { label: 'Partnership Image', value: 'partnership-image' },
+        { label: 'Client Image', value: 'client-image' },
+      ],
+      hasMany: false,
+      unique: true,
+      defaultValue: 'global-image',
+    },
+    {
+      name: 'isDarkMode',
+      type: 'radio',
+      required: false,
+      options: [
+        { label: 'True', value: 'true' },
+        { label: 'False', value: 'false' },
+      ],
+      defaultValue: 'false',
+    },
   ],
-  upload: true,
+  upload: {
+    mimeTypes: ['image/*'],
+    formatOptions: {
+      format: 'webp',
+    },
+  },
 }

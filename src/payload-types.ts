@@ -140,6 +140,10 @@ export interface User {
 export interface Media {
   id: string;
   alt: string;
+  caption?: string | null;
+  useAs?: ('global-image' | 'tech-stack-image' | 'partnership-image' | 'client-image') | null;
+  isDarkMode?: ('true' | 'false') | null;
+  prefix?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -248,6 +252,10 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  caption?: T;
+  useAs?: T;
+  isDarkMode?: T;
+  prefix?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
