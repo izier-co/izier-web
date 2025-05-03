@@ -18,6 +18,7 @@ export const Media: CollectionConfig = {
     },
     {
       name: 'useAs',
+      label: 'Image Usage',
       type: 'select',
       required: false,
       options: [
@@ -32,6 +33,18 @@ export const Media: CollectionConfig = {
     },
     {
       name: 'isDarkMode',
+      label: 'Is Dark Mode',
+      type: 'radio',
+      required: false,
+      options: [
+        { label: 'True', value: 'true' },
+        { label: 'False', value: 'false' },
+      ],
+      defaultValue: 'false',
+    },
+    {
+      name: 'isHide',
+      label: 'Hide image',
       type: 'radio',
       required: false,
       options: [

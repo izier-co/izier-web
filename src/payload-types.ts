@@ -143,6 +143,7 @@ export interface Media {
   caption?: string | null;
   useAs?: ('global-image' | 'tech-stack-image' | 'partnership-image' | 'client-image' | 'test-image') | null;
   isDarkMode?: ('true' | 'false') | null;
+  isHide?: ('true' | 'false') | null;
   prefix?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -255,6 +256,7 @@ export interface MediaSelect<T extends boolean = true> {
   caption?: T;
   useAs?: T;
   isDarkMode?: T;
+  isHide?: T;
   prefix?: T;
   updatedAt?: T;
   createdAt?: T;
