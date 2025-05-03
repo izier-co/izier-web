@@ -141,7 +141,7 @@ export interface Media {
   id: string;
   alt: string;
   caption?: string | null;
-  useAs?: ('global-image' | 'tech-stack-image' | 'partnership-image' | 'client-image') | null;
+  useAs?: ('global-image' | 'tech-stack-image' | 'partnership-image' | 'client-image' | 'test-image') | null;
   isDarkMode?: ('true' | 'false') | null;
   prefix?: string | null;
   updatedAt: string;

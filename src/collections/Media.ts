@@ -1,4 +1,3 @@
-import { sign } from 'crypto'
 import type { CollectionConfig } from 'payload'
 
 export const Media: CollectionConfig = {
@@ -26,6 +25,7 @@ export const Media: CollectionConfig = {
         { label: 'Tech Stack Image', value: 'tech-stack-image' },
         { label: 'Partnership Image', value: 'partnership-image' },
         { label: 'Client Image', value: 'client-image' },
+        { label: 'Test Image', value: 'test-image' },
       ],
       hasMany: false,
       unique: true,
