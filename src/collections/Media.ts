@@ -28,7 +28,6 @@ export const Media: CollectionConfig = {
         { label: 'Test Image', value: 'test-image' },
       ],
       hasMany: false,
-      unique: true,
       defaultValue: 'global-image',
     },
     {
