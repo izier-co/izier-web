@@ -14,7 +14,7 @@ export const TechStack = ({ children, className }: TechStackProps) => {
 
 export const TechStackImageGrid = ({ children }: TechStackProps) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5 grid-rows-5 md:grid-rows-2 h-fit w-full">
+    <div className="grid grid-cols-2 md:grid-cols-5 grid-rows-3 md:grid-rows-5 h-fit w-full">
       {children}
     </div>
   )
