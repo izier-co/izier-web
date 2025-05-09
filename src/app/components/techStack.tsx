@@ -1,3 +1,6 @@
+'use client'
+
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import type { ImageProps } from 'next/image'
 
@@ -21,6 +24,8 @@ export const TechStackImageGrid = ({ children }: TechStackProps) => {
 }
 
 export const TechStackImage = ({ ...props }: TechStackImageProps) => {
+  const { theme } = useTheme()
+
   return (
     <>
       <div className="border-[.8px] border-white relative h-48 mx-auto w-full flex justify-center items-center">
