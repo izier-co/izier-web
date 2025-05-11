@@ -13,7 +13,11 @@ export default async function HomePage() {
   const findResult = await payload.find({ collection: 'services' })
   const mediaResult = await payload.find({
     collection: 'media',
-    where: { useAs: { equals: 'tech-stack-image' }, isHide: { equals: 'false' } },
+    where: {
+      useAs: { equals: 'tech-stack-image' },
+      isHide: { equals: false },
+      isDarkMode: { equals: true },
+    },
   })
 
   return (
