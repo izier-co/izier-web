@@ -16,7 +16,11 @@ const ThemeSwitcher = () => {
   return (
     <div className="flex flex-row gap-4">
       <span className="sr-only">Select Theme</span>
-      <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+      <select
+        className="text-brand-black dark:text-brand-white bg-brand-white dark:bg-brand-black"
+        value={theme}
+        onChange={(e) => setTheme(e.target.value)}
+      >
         <option value="system">System</option>
         <option value="dark">Dark</option>
         <option value="light">Light</option>
