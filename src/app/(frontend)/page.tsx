@@ -6,19 +6,11 @@ import CustomLink from '@/components/customLink'
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { Text } from '@/components/text'
-import { TechStack, TechStackImage, TechStackImageGrid } from '@/components/techStack'
+import { TechStack, TechStackImage } from '@/components/techStack'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
   const findResult = await payload.find({ collection: 'services' })
-  const mediaResult = await payload.find({
-    collection: 'media',
-    where: {
-      useAs: { equals: 'tech-stack-image' },
-      isHide: { equals: false },
-      isDarkMode: { equals: true },
-    },
-  })
 
   return (
     <div className="flex flex-col gap-6">
@@ -53,17 +45,7 @@ export default async function HomePage() {
       </Service>
       <TechStack className="flex flex-col gap-6">
         <Text>Lorem ipsum dolor sit amet</Text>
-        <TechStackImageGrid>
-          {mediaResult.docs.map((media) => (
-            <TechStackImage
-              key={media.id}
-              src={media.url || ''}
-              alt={media.alt}
-              width={64}
-              height={64}
-            />
-          ))}
-        </TechStackImageGrid>
+        <TechStackImage />
       </TechStack>
     </div>
   )
