@@ -7,6 +7,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { Text } from '@/components/text'
 import { TechStack, TechStackImage } from '@/components/techStack'
+import ThemeSwitcher from '@/components/themeSwitcher'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -44,9 +45,14 @@ export default async function HomePage() {
         </div>
       </Service>
       <TechStack className="flex flex-col gap-6">
-        <Text>Lorem ipsum dolor sit amet</Text>
+        <Text>
+          Our tech stack powers scalable, secure, and high-performance solutions—leveraging modern
+          frameworks, real-time platforms, and cross-platform technologies to accelerate digital
+          transformation.
+        </Text>
         <TechStackImage />
       </TechStack>
+      <ThemeSwitcher />
     </div>
   )
 }
