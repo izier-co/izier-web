@@ -10,14 +10,6 @@ export const TechStack = ({ children, className }: TechStackProps) => {
   return <div className={className}>{children}</div>
 }
 
-export const TechStackImageGrid = ({ children }: TechStackProps) => {
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-5 grid-rows-3 md:grid-rows-5 h-fit w-full">
-      {children}
-    </div>
-  )
-}
-
 export const TechStackImage = () => {
   return (
     <>
