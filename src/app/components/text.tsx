@@ -1,6 +1,5 @@
 type TextProps = {
-    children?: React.ReactNode
-    
+  children?: React.ReactNode
 }
 
 export const Text = ({ children }: TextProps) => {
@@ -9,4 +8,8 @@ export const Text = ({ children }: TextProps) => {
       <p className="font-light text-light-gray-11 dark:text-dark-gray-11">{children}</p>
     </div>
   )
+}
+
+export const Highlight = ({ children }: TextProps) => {
+  return <span className="font-bold text-light-gray-12 dark:text-dark-gray-12">{children}</span>
 }
