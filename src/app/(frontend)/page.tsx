@@ -8,6 +8,8 @@ import config from '@payload-config'
 import { Text } from '@/components/text'
 import { TechStack, TechStackImage } from '@/components/techStack'
 import ThemeSwitcher from '@/components/themeSwitcher'
+import Methodology from '@/components/methodology'
+import CustomDivider from '@/components/customDivider'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -52,6 +54,8 @@ export default async function HomePage() {
         </Text>
         <TechStackImage />
       </TechStack>
+      <CustomDivider />
+      <Methodology />
       <ThemeSwitcher />
     </div>
   )
