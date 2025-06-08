@@ -9,7 +9,7 @@ type ThemeAwareImageProps = {
 
 const ThemeAwareImage = ({ lightModeComponent, darkModeComponent }: ThemeAwareImageProps) => {
   const { theme } = useTheme()
-  const className = 'grid grid-cols-2 md:grid-cols-5 grid-rows-3 md:grid-rows-5 h-fit w-full'
+  const className = 'grid grid-cols-2 md:grid-cols-5 grid-rows-3 md:grid-rows-2 h-fit w-full'
   switch (theme) {
     case 'dark':
       return <div className={className}>{darkModeComponent}</div>
