@@ -10,6 +10,7 @@ import { TechStack, TechStackImage } from '@/components/section/techStack'
 import ThemeSwitcher from '@/components/themeSwitcher'
 import Methodology from '@/components/section/methodology'
 import CustomDivider from '@/components/customDivider'
+import Workflow from '@/components/section/workflow'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -56,6 +57,7 @@ export default async function HomePage() {
       </TechStack>
       <CustomDivider />
       <Methodology />
+      <Workflow />
       <ThemeSwitcher />
     </div>
   )
