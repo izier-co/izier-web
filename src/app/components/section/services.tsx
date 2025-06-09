@@ -1,4 +1,4 @@
-import CustomLink from './customLink'
+import CustomLink from '../customLink'
 
 type ServiceProps = {
   children?: React.ReactNode
