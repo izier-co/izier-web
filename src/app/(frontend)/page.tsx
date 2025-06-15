@@ -11,6 +11,7 @@ import ThemeSwitcher from '@/components/themeSwitcher'
 import Methodology from '@/components/section/methodology'
 import CustomDivider from '@/components/customDivider'
 import Workflow from '@/components/section/workflow'
+import Footer from '@/components/footer'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -59,6 +60,7 @@ export default async function HomePage() {
       <Methodology />
       <Workflow />
       <ThemeSwitcher />
+      <Footer />
     </div>
   )
 }
