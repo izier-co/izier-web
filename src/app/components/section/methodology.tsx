@@ -1,5 +1,5 @@
 import { Text, Highlight } from '@/components/text'
-import CustomLink from './customLink'
+import CustomLink from '../customLink'
 
 const Methodology = () => {
   return (

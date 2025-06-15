@@ -1,15 +1,16 @@
 import './globals.css'
 import Title from '@/components/heroTitle'
-import ValueProposition from '@/components/valueProp'
-import { Service, ServiceList } from '@/components/services'
+import ValueProposition from '@/components/section/valueProp'
+import { Service, ServiceList } from '@/components/section/services'
 import CustomLink from '@/components/customLink'
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { Text } from '@/components/text'
-import { TechStack, TechStackImage } from '@/components/techStack'
+import { TechStack, TechStackImage } from '@/components/section/techStack'
 import ThemeSwitcher from '@/components/themeSwitcher'
-import Methodology from '@/components/methodology'
+import Methodology from '@/components/section/methodology'
 import CustomDivider from '@/components/customDivider'
+import Workflow from '@/components/section/workflow'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -56,6 +57,7 @@ export default async function HomePage() {
       </TechStack>
       <CustomDivider />
       <Methodology />
+      <Workflow />
       <ThemeSwitcher />
     </div>
   )
